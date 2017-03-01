@@ -5,9 +5,13 @@ exports.projectInfo = function(req, res) { 
 
   // query for the specific project and
   // call the following callback
+  models.Project
+    .find()
+    .exec(afterQuery)
 
   function afterQuery(err, projects) {
     if(err) console.log(err);
+    console.log(projects);
     res.json(projects[0]);
   }
 }
