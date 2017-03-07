@@ -22,6 +22,7 @@ $('.emocom:nth-child('+i+')').click(function(e){
 */
 //signin button
 
+
 $('#signInButton').click(function(e){
 	e.preventDefault();
 	window.location.href = '/home';
@@ -55,6 +56,7 @@ $(".chore-delete").click(function(e){
 				});
 
 })
+
 
 //Remix with W3Schools
 var new_model_html; 
@@ -129,7 +131,10 @@ window.onclick = function(event) {
 
 $.get('/emoticomments', addModal);
 
+$("#choresBImages #commentButton").click(function(e){
 
+	alert('Sent emoticomment response');
+})
 }
 
 

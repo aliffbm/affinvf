@@ -347,6 +347,10 @@ font-size: 20px;
 #myTaksSentiment li{
      font-size: 20px;
 }
+#choresBImages{
+    width:60%;
+    margin: auto;
+}
 
 @media screen and (max-width: 1248px){
      #myTaskSentiment li{
