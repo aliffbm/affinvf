@@ -114,7 +114,7 @@ var span = document.getElementsByClassName("close")[0];
 btn.onclick = function(e) {
 	e.preventDefault();
     modal.style.display = "block";
-    ga("send", "event", "emotiCommentA", "Click");
+    ga("send", "event", "emotiComment", "click");
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -137,7 +137,7 @@ $.get('/emoticomments', addModal);
 $("#choresBImages #commentButton").click(function(e){
 	e.preventDefault();
 	alert('Sent emoticomment response');
-	ga("send", "event", "emotiCommentB", "Click");
+	ga("send", "event", "emotiComment", "click");
 })
 }
 
