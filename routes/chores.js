@@ -16,6 +16,18 @@ exports.viewChores = function(req, res){
 
 }
 
+exports.viewChoresB = function(req, res){
+
+  models.Chore
+    .find()
+    .exec(renderChoresB);
+
+  function renderChoresB(err, chores){
+
+    res.render('choresB', {'chores': chores});
+  }
+}
+
 exports.addChore = function(req, res) {
   var form_data = req.body;
   console.log(form_data);

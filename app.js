@@ -12,7 +12,7 @@ var mongoose = require('mongoose');
 var index = require('./routes/index');
 var home = require('./routes/home');
 var chores = require('./routes/chores');
-var choresB = require('./routes/choresB');
+// var choresB = require('./routes/choresB');
 var stats = require('./routes/statistics');
 var emoticomments = require('./routes/emoticomments')
 //var emoticomments = require('./routes/emoticomments');
@@ -54,22 +54,19 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/home', home.viewHome);
 app.get('/chores', chores.viewChores);
+app.get('/choresb', chores.viewChoresB);
 app.post('/chores/:id/delete', chores.deleteChore);
 app.post('/chores/new', chores.addChore);
-
-app.get('/choresB', choresB.viewChores);
-app.post('/choresB/:id/delete', choresB.deleteChore);
-app.post('/choresB/new', choresB.addChore);
 
 app.get('/statistics', stats.viewStatistics);
 
 app.get('/emoticomments', emoticomments.viewEmotiComments);
 
+/*app.get('/choresB', choresB.viewChores);
+*/
+// app.post('/choresB/:id/delete', choresB.deleteChore);
+// app.post('/choresB/new', choresB.addChore);
 
-
-
-// Example route
-// app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

@@ -43,6 +43,7 @@ $('#newChoreSubmitButton').click(function(e){
 	$.post('/chores/new', json, function(){
 		window.location.href = '/chores';
 	});
+	ga("send", "event", "newAddedChore", "Click");
 });
 
 // delete Chores
@@ -110,8 +111,10 @@ var btn = document.getElementById("myBtn"+i+"");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
+btn.onclick = function(e) {
+	e.preventDefault();
     modal.style.display = "block";
+    ga("send", "event", "emotiCommentA", "Click");
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -132,8 +135,9 @@ window.onclick = function(event) {
 $.get('/emoticomments', addModal);
 
 $("#choresBImages #commentButton").click(function(e){
-
+	e.preventDefault();
 	alert('Sent emoticomment response');
+	ga("send", "event", "emotiCommentB", "Click");
 })
 }
 
