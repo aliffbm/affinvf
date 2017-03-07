@@ -18,7 +18,7 @@ var models   = require('./routes/models');
 // Connect to the Mongo database, whether locally or on Heroku
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
 var local_database_name = 'affin';
-var mongodbURI = "mongodb://heroku_dh6mhm9h:j4o2qc38rm1vvlap5h35ps676j@ds121190.mlab.com:21190/heroku_dh6mhm9h";
+var mongodbURI = "mongodb://heroku_3b5860g1:adannf1r7iabc18mbsu23a9moo@ds119810.mlab.com:19810/heroku_3b5860g1";
 var local_database_uri  = 'mongodb://localhost/' + local_database_name
 var database_uri = mongodbURI || local_database_uri
 
