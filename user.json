@@ -1,0 +1,22 @@
+[
+		{
+			"name": "Aliff",
+			"currentChore": "Dishes",
+			"expectedTime": "4 days"
+		},
+		{
+			"name": "Belal",
+			"currentChore": "Vaccuming",
+			"expectedTime": "4 days"
+		},
+		{
+			"name": "Zack",
+			"currentChore": "Trash",
+			"expectedTime": "4 days"
+		},
+		{
+			"name": "Esteban",
+			"currentChore": "Mopping",
+			"expectedTime": "4 days"
+		}
+	]

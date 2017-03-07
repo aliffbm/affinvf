@@ -1,0 +1,40 @@
+{
+	"emoticomments":[
+		{
+		
+			"image": "/images/svg/angel.svg"
+		},
+		{
+		
+			"image": "/images/svg/astonished.svg"
+		},
+		{
+		
+			"image": "/images/svg/disappointed.svg"
+		},
+		{
+		
+			"image": "/images/svg/faceRollEyes.svg"
+		},
+		{
+		
+			"image": "/images/svg/grin-smile.svg"
+		},
+		{
+		
+			"image": "/images/svg/happy.svg"
+		},
+		{
+		
+			"image": "/images/svg/neutral.svg"
+		},
+		{
+		
+			"image": "/images/svg/triumph.svg"
+		},
+		{
+			"image": "/images/svg/worried.svg"
+
+		}
+	]	
+}

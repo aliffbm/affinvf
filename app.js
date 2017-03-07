@@ -10,7 +10,12 @@ var handlebars = require('express3-handlebars');
 var mongoose = require('mongoose');
 
 var index = require('./routes/index');
-var project = require('./routes/project');
+var home = require('./routes/home');
+var chores = require('./routes/chores');
+var choresB = require('./routes/choresB');
+var stats = require('./routes/statistics');
+var emoticomments = require('./routes/emoticomments')
+//var emoticomments = require('./routes/emoticomments');
 // Example route
 // var user = require('./routes/user');
 
@@ -47,9 +52,22 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/project/:id', project.projectInfo);
-app.post('/project/new', project.addProject);
-app.post('/project/:id/delete', project.deleteProject);
+app.get('/home', home.viewHome);
+app.get('/chores', chores.viewChores);
+app.post('/chores/:id/delete', chores.deleteChore);
+app.post('/chores/new', chores.addChore);
+
+app.get('/choresB', choresB.viewChores);
+app.post('/choresB/:id/delete', choresB.deleteChore);
+app.post('/choresB/new', choresB.addChore);
+
+app.get('/statistics', stats.viewStatistics);
+
+app.get('/emoticomments', emoticomments.viewEmotiComments);
+
+
+
+
 // Example route
 // app.get('/users', user.list);
 
