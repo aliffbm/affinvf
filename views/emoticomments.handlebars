@@ -6,7 +6,17 @@
 </head>
 <body>
 {{#each emoticomments}}
-<a href="#"><img class="emotiImage" width=50 src="{{image}}"/></a>
+<img class="emotiImage" href="#" id={{id}} width=50 src="{{image}}"/>
 {{/each}}
+
+<!-- <script>
+var length = $('.emotiImage').length;
+console.log(length);
+for(var i=0;i<length;i++){
+$(".emotImage:nth-child("+i+")").click(function(e){
+	e.preventDefault();
+	alert("okay done");
+	})
+}</script> -->
 </body>
 </html>

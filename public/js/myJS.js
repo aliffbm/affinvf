@@ -11,6 +11,15 @@ $(document).ready(function() {
  */
 function initializePage() {
 
+
+/*for(var i=0;i<emoSize;i++){
+$('.emocom:nth-child('+i+')').click(function(e){
+	e.preventDefault();
+	console.log("emocom was clicked");
+})
+
+}
+*/
 //signin button
 
 $('#signInButton').click(function(e){
@@ -63,7 +72,7 @@ for(var i=1;i<=lengthOf;i++){
 				'<h2 class="text-center">Choose an EmotiComment</h2>'+
 			'</div>'+
 			'<div class="modal-body">'+
-				emoticomments_json+
+				'<a href="#" class="emocom">'+emoticomments_json+'</a>'+
 			'</div>'+
 		
 			'<div class="modal-footer">'+
@@ -76,7 +85,19 @@ for(var i=1;i<=lengthOf;i++){
 theID = $('.panel-default:nth-child('+i+')');
 theID.find(".panel-heading").after().append(new_model_html);
 
-
+/*var chorePanelSize = $(".emocom").length;
+var emoSize = $(".emotiImage");
+for(var i=0;i<chorePanelSize;i++){
+	for(var j=0;j<emoSize;i++){
+		$(".emotiImage:nth-child("+i+")").click(function(e){
+			e.preventDefault();
+			console.log("emo clicked");
+		})
+	}
+}
+console.log("size is.ff..");
+console.log(emoSize);
+*/
 // --------------------------------------------------
 var modal = document.getElementById('myModal'+i+'');
 
@@ -107,9 +128,6 @@ window.onclick = function(event) {
 }
 
 $.get('/emoticomments', addModal);
-
-
-
 
 
 }
