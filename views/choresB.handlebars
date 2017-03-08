@@ -68,7 +68,8 @@
 
   <div class="row text-center" id="choresBImages">
      <img id="commentBtn" class="pull-left" width=50 src="/images/svg/comment.svg" style="cursor: pointer; cursor: hand;"/>
-      <img src="/images/lock_open.png"  style="width:50px; margin:auto;"/><img class="pull-right" src="/images/svg/add.svg" style="width:50px;"/>
+      <img src="/images/lock_open.png"  style="width:50px; margin:auto;"/>
+      <img id="addChoreBBtn" class="pull-right" src="/images/svg/add.svg" style="width:50px; cursor: pointer; cursor: hand;"/>
 
   </div>
        <div id="commentModal" class="modal">
@@ -82,6 +83,40 @@
             <img class="" src="{{image}}"/>
           </div>
           {{/each}}
+          <div class="modal-footer">
+            <h3></h3>
+          </div>
+        </div>
+      </div>
+
+      <div id="addChoreBModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 class="text-center">Add a Chore</h2>
+          </div>
+          
+          <div class="modal-body">
+            <form class="form" id="new-chore-form">
+              <div class="form-group">
+                <label class="control-label" for="choreTitle">Chore Name: </label>
+                <input type="text" class="form-control" id="choreTitle" placeholder="i.e. Dishes, Bathroom, Etc." />
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="expectedTime">Timeframe: </label>
+                <input type="text" class="form-control" id="expectedTime" placeholder="i.e. 4 days" />
+              </div>
+
+              <div class="form-group">
+                <label class="control-label" for="imageURL">Image URL: </label>
+                <input type="text" class="form-control" id="imageURL" placeholder="http://www.example.com/pic_of_chore.jpg" />
+              </div>
+              <div class="form-group">
+                <button id="newChoreSubmitButton" class="btn btn-default" type="button">Add Chore</button>
+              </div>
+            </form>
+          </div>
+      
           <div class="modal-footer">
             <h3></h3>
           </div>

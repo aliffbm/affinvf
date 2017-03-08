@@ -36,7 +36,7 @@ exports.addChore = function(req, res) {
   chore.save(afterSave);
   function afterSave(err){
     if(err) {console.log(err); res.send(500);}
-    res.redirect("/chores");
+    res.redirect(req.get('referer'));
 
   }
   // make a new Project and save it to the DB

@@ -31,7 +31,7 @@ $('#newChoreSubmitButton').click(function(e){
 		"image": imageURL
 	}
 	$.post('/chores/new', json, function(){
-		window.location.href = '/chores';
+		window.location.href = window.location.href;
 	});
 	ga("send", "event", "newAddedChore", "Click");
 });
@@ -137,19 +137,45 @@ span.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, close it
 
-window.onclick = function(event) {
+/*window.onclick = function(event) {
 	if (event.target == modal) {
 		modal.style.display = "none";
 	}
+}*/
+
+// create modal for emoticomment on Chore B
+
+var modalB = document.getElementById('addChoreBModal');
+
+// Get the button that opens the modal
+var btnB = document.getElementById("addChoreBBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btnB.onclick = function(e) {
+	e.preventDefault();
+	modalB.style.display = "block";
+	ga("send", "event", "newAddedChore", "Click");
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+	modalB.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+
+window.onclick = function(event) {
+	if (event.target == modalB || event.target == modal) {
+		modalB.style.display = "none";
+		modal.style.display = "none";
+	}
+
 }
 
 
-
-$("#choresBImages #commentButton").click(function(e){
-	e.preventDefault();
-	alert('Sent emoticomment response');
-	ga("send", "event", "emotiComment", "click");
-})
 }
 
 
