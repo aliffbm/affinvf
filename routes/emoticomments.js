@@ -1,4 +1,5 @@
 var models = require('./models.js');
+var emoData = require('../emoticomments.json');
 /*
  * GET home page.
  */
@@ -16,3 +17,8 @@ exports.viewEmotiComments = function(req, res){
 
 }
 
+exports.viewEmotiCommentsJSON = function(req, res){
+
+	res.render('choresB', emoData);
+
+}
