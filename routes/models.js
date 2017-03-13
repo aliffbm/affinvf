@@ -18,7 +18,8 @@ var ChoreSchema = new Mongoose.Schema({
   // fields are defined here
  	 	"name": String,
  	 	"expectedTime": String,
-		"image": String
+		"image": String,
+		"emoticomments": [{"name": String, "image": String, "hits": Number}]
 });
 
 exports.Chore = Mongoose.model('Chore', ChoreSchema);

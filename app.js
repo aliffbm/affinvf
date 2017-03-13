@@ -60,8 +60,8 @@ app.post('/chores/new', chores.addChore);
 
 app.get('/statistics', stats.viewStatistics);
 
-app.get('/emoticomments', emoticomments.viewEmotiComments);
-app.get('/emoticommentsjson', emoticomments.viewEmotiCommentsJSON);
+app.get('/emoticomments', emoticomments.emoJSON);
+// app.get('/emoticommentsjson', emoticomments.viewEmotiCommentsJSON);
 
 /*app.get('/choresB', choresB.viewChores);
 */

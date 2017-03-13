@@ -1,40 +1,51 @@
 {
 	"emoticomments":[
 		{
-		
-			"image": "/images/svg/angel.svg"
-		},
-		{
-		
-			"image": "/images/svg/astonished.svg"
-		},
-		{
-		
-			"image": "/images/svg/disappointed.svg"
-		},
-		{
-		
-			"image": "/images/svg/faceRollEyes.svg"
-		},
-		{
-		
-			"image": "/images/svg/grin-smile.svg"
-		},
-		{
-		
-			"image": "/images/svg/happy.svg"
-		},
-		{
-		
-			"image": "/images/svg/neutral.svg"
-		},
-		{
-		
-			"image": "/images/svg/triumph.svg"
-		},
-		{
-			"image": "/images/svg/worried.svg"
 
-		}
+					"name": "angel",
+					"image": "images/svg/angel.svg",
+					"hits": 0
+				},
+				{
+					"name": "astonished",
+					"image": "images/svg/astonished.svg",
+					"hits": 0
+				},
+				{
+					"name": "disappointed",
+					"image": "images/svg/disappointed.svg",
+					"hits": 0
+				},
+				{
+					"name": "faceRollEyes",
+					"image": "images/svg/faceRollEyes.svg",
+					"hits": 0
+				},
+				{
+					"name": "grin",
+					"image": "images/svg/grin-smile.svg",
+					"hits": 0
+				},
+				{
+					"name": "happy",
+					"image": "images/svg/happy.svg",
+					"hits": 0
+				},
+				{
+					"name": "neutral",
+					"image": "images/svg/neutral.svg",
+					"hits": 0
+				},
+				{
+					"name": "triumph",
+					"image": "images/svg/triumph.svg",
+					"hits": 0
+				},
+				{
+					"name": "worried",
+					"image": "images/svg/worried.svg",
+					"hits": 0
+
+				}
 	]	
 }

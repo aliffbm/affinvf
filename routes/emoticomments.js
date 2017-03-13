@@ -1,9 +1,9 @@
-var models = require('./models.js');
+/*var models = require('./models.js');*/
 var emoData = require('../emoticomments.json');
 /*
  * GET home page.
  */
-
+/*
 exports.viewEmotiComments = function(req, res){
 
 	models.EmotiComment
@@ -21,4 +21,8 @@ exports.viewEmotiCommentsJSON = function(req, res){
 
 	res.render('choresB', emoData);
 
+}*/
+
+exports.emoJSON = function(req, res){
+	res.json(emoData);
 }

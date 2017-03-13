@@ -4,67 +4,222 @@
 			
 			"name": "Dishes",
 			"expectedTime": "30 min",
-			"image": "/images/sink.jpg"
+			"image": "/images/sink.jpg",
+			"emoticomments":[
+				{
+
+					"name": "angel",
+					"image": "images/svg/angel.svg",
+					"hits": 0
+				},
+				{
+					"name": "astonished",
+					"image": "images/svg/astonished.svg",
+					"hits": 0
+				},
+				{
+					"name": "disappointed",
+					"image": "images/svg/disappointed.svg",
+					"hits": 0
+				},
+				{
+					"name": "faceRollEyes",
+					"image": "images/svg/faceRollEyes.svg",
+					"hits": 0
+				},
+				{
+					"name": "grin",
+					"image": "images/svg/grin-smile.svg",
+					"hits": 0
+				},
+				{
+					"name": "happy",
+					"image": "images/svg/happy.svg",
+					"hits": 0
+				},
+				{
+					"name": "neutral",
+					"image": "images/svg/neutral.svg",
+					"hits": 0
+				},
+				{
+					"name": "triumph",
+					"image": "images/svg/triumph.svg",
+					"hits": 0
+				},
+				{
+					"name": "worried",
+					"image": "images/svg/worried.svg",
+					"hits": 0
+
+				}
+			]
 		},
 		{
 			
 			"name": "Trash",
 			"expectedTime": "10 min",
-			"image": "images/oven_3.jpg"
+			"image": "images/oven_3.jpg",
+			"emoticomments":[
+				{
+
+					"name": "angel",
+					"image": "images/svg/angel.svg",
+					"hits": 0
+				},
+				{
+					"name": "astonished",
+					"image": "images/svg/astonished.svg",
+					"hits": 0
+				},
+				{
+					"name": "disappointed",
+					"image": "images/svg/disappointed.svg",
+					"hits": 0
+				},
+				{
+					"name": "faceRollEyes",
+					"image": "images/svg/faceRollEyes.svg",
+					"hits": 0
+				},
+				{
+					"name": "grin",
+					"image": "images/svg/grin-smile.svg",
+					"hits": 0
+				},
+				{
+					"name": "happy",
+					"image": "images/svg/happy.svg",
+					"hits": 0
+				},
+				{
+					"name": "neutral",
+					"image": "images/svg/neutral.svg",
+					"hits": 0
+				},
+				{
+					"name": "triump",
+					"image": "images/svg/triump.svg",
+					"hits": 0
+				},
+				{
+					"name": "worried",
+					"image": "images/svg/worried.svg",
+					"hits": 0
+
+				}
+			]
 		},
 		{
 		
 			"name": "Vacuuming",
 			"expectedTime": "45 min",
-			"image": "images/shower.jpg"
+			"image": "images/shower.jpg",
+			"emoticomments":[
+				{
+
+					"name": "angel",
+					"image": "images/svg/angel.svg",
+					"hits": 0
+				},
+				{
+					"name": "astonished",
+					"image": "images/svg/astonished.svg",
+					"hits": 0
+				},
+				{
+					"name": "disappointed",
+					"image": "images/svg/disappointed.svg",
+					"hits": 0
+				},
+				{
+					"name": "faceRollEyes",
+					"image": "images/svg/faceRollEyes.svg",
+					"hits": 0
+				},
+				{
+					"name": "grin",
+					"image": "images/svg/grin-smile.svg",
+					"hits": 0
+				},
+				{
+					"name": "happy",
+					"image": "images/svg/happy.svg",
+					"hits": 0
+				},
+				{
+					"name": "neutral",
+					"image": "images/svg/neutral.svg",
+					"hits": 0
+				},
+				{
+					"name": "triump",
+					"image": "images/svg/triump.svg",
+					"hits": 0
+				},
+				{
+					"name": "worried",
+					"image": "images/svg/worried.svg",
+					"hits": 0
+
+				}
+			]
 		},
 		{
 			
 			"name": "Mopping",
 			"expectedTime": "1 hr",
-			"image": "images/laundry.jpg"
-		}
-	],
+			"image": "images/laundry.jpg",
+			"emoticomments":[
+				{
 
+					"name": "angel",
+					"image": "images/svg/angel.svg",
+					"hits": 0
+				},
+				{
+					"name": "astonished",
+					"image": "images/svg/astonished.svg",
+					"hits": 0
+				},
+				{
+					"name": "disappointed",
+					"image": "images/svg/disappointed.svg",
+					"hits": 0
+				},
+				{
+					"name": "faceRollEyes",
+					"image": "images/svg/faceRollEyes.svg",
+					"hits": 0
+				},
+				{
+					"name": "grin",
+					"image": "images/svg/grin-smile.svg",
+					"hits": 0
+				},
+				{
+					"name": "happy",
+					"image": "images/svg/happy.svg",
+					"hits": 0
+				},
+				{
+					"name": "neutral",
+					"image": "images/svg/neutral.svg",
+					"hits": 0
+				},
+				{
+					"name": "triump",
+					"image": "images/svg/triump.svg",
+					"hits": 0
+				},
+				{
+					"name": "worried",
+					"image": "images/svg/worried.svg",
+					"hits": 0
 
-	"emoticomments":[
-		{
-
-			
-			"image": "images/svg/angel.svg"
-		},
-		{
-			
-			"image": "images/svg/astonished.svg"
-		},
-		{
-			
-			"image": "images/svg/disappointed.svg"
-		},
-		{
-			
-			"image": "images/svg/faceRollEyes.svg"
-		},
-		{
-			
-			"image": "images/svg/grin-smile.svg"
-		},
-		{
-			
-			"image": "images/svg/happy.svg"
-		},
-		{
-			
-			"image": "images/svg/neutral.svg"
-		},
-		{
-			
-			"image": "images/svg/triump.svg"
-		},
-		{
-			
-			"image": "images/svg/worried.svg"
-
+				}
+			]
 		}
 	]
+
 }
