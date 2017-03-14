@@ -14,7 +14,7 @@ exports.view = function(req, res){
 
 	function renderProjects(err, projects) {
 		
-		res.render('index', { 'projects': projects });
+		res.render('index', { 'projects': projects, layout: 'landing' });
 	}
 
 };

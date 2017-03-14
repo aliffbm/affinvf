@@ -34,6 +34,8 @@ var emoticomments_json = emoti.emoticomments;
 var chores = require('./chores.json');
 var chores_json = chores.chores;
 
+var user_json = require('./user.json');
+
 
 
 
@@ -94,6 +96,38 @@ function onceClearB(err) {
       console.log(to_save_count + ' left to save');
       if(to_save_count <= 0) {
         console.log('DONE with EmotiComment');
+        // The script won't terminate until the 
+        // connection to the database is closed
+       
+      }
+    });
+  }
+}
+
+// Step 2: Remove all existing documents
+models.User
+  .find()
+  .remove()
+  .exec(onceClearC); // callback to continue at
+
+// Step 3: load the data from the JSON file
+function onceClearC(err) {
+  if(err) console.log(err);
+
+  // loop over the projects, construct and save an object from each one
+  // Note that we don't care what order these saves are happening in...
+  var to_save_count = user_json.length;
+  for(var i=0; i<user_json.length; i++) {
+    var json = user_json[i];
+    var user = new models.User(json);
+
+    user.save(function(err, user) {
+      if(err) console.log(err);
+
+      to_save_count--;
+      console.log(to_save_count + ' left to save');
+      if(to_save_count <= 0) {
+        console.log('DONE with User');
         // The script won't terminate until the 
         // connection to the database is closed
         mongoose.connection.close()

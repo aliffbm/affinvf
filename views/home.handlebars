@@ -19,61 +19,45 @@
 </head>
 
 <body>
-<nav class="navbar navbar-fixed-top navbarColor" id="navbar-default-override">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Affiniate</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/home">Home</a></li>
-        <li><a href="/chores">Chores</a></li>
-       <li><a href="/statistics">Statistics</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-      
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+
 
 <div class="container-fluid" id="homePageIn">
 
 			<div class="container" id="containerHome">
+        {{#each user}}
+        <h1 style="text-align:center; padding-bottom: 10px;">Hello, {{name}}!!</h1>
+       
         <div class="container" id="innerContainerHome">
 				<div class="row" id="task_to_complete_home">
-        <h1 style="padding-left: 20px;">Hello, Me!!</h1>
+      
 					<div class="col-sm-12 text-center">
 						
+
 					 	<div class="col-sm-7" id="size_of_task_div">
 					 	<div class="col-sm-12" id="task_text_container_header">
-					 		<h3>Your task is dishes</h3>
+					 		<h3>Your task is {{currentChore}}</h3>
 					 	</div>
+            <img width="300" src="{{image}}"/>
 					 	<div class="col-sm-12" id="task_text_container_info">
-					 	<p># of days to Complete: No.</p>
+					 	<p># of days to Complete: {{daysToComplete}}</p>
          				</div>
          				</div>
          				<div class="col-sm-5">
          				<p>When dishes are clean people...</p>
          				<ul id="myTaskSentiment">
-         					<li><img src="images/happyCartWheel.png"/>Feel better</li>
-         					<li><img src="images/money.png"/> Don't have to spend money to eat out</li>
+         					<li><img src="../images/happyCartWheel.png"/>Feel better</li>
+         					<li><img src="../images/money.png"/> Don't have to spend money to eat out</li>
          				</ul>
          				</div>
 					</div>
+          {{/each}}
 					
-					<div class="col-sm-3 col-sm-push-1 text-center" id="complete_chore_btn">
+					<div class="col-sm-3 col-sm-push-2 text-center" id="complete_chore_btn">
 
-					<button type="button" class="btn btn-primary btn-lg raised">Compete Chore!</button>									
+					<img width=60 src="../images/svg/checkMark.svg" style="margin:auto;">								
 					</div>
-					<div class="col-sm-3 col-sm-push-1">
-          <button type="button" class="btn btn-primary btn-lg raised">Request Chore</button> 
+					<div class="col-sm-3" style="visibility: hidden;">
+          <button type="button" style="border-radius:150px; margin-top: 10px;" class="btn btn-primary pull-left">Request Chore</button> 
 					</div>
           
 				</div>

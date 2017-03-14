@@ -68,6 +68,9 @@ img.modal{
      
      color:white;
      margin-bottom: 0px;
+     padding-left:20px;
+     padding-right: 30px;
+
 
 }
 
@@ -177,7 +180,6 @@ img.modal{
      border-bottom: 1px solid #fff;
 }
 #size_of_task_div{
-     background-image: url(../images/sink.jpg);
      min-height: 300px;
      background-repeat: no-repeat;
      background-size: cover;

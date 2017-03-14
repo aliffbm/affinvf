@@ -31,3 +31,14 @@ var EmotiCommentSchema = new Mongoose.Schema({
 });
 
 exports.EmotiComment = Mongoose.model('EmotiComment', EmotiCommentSchema);
+
+
+var UserSchema = new Mongoose.Schema({
+
+	"name": String,
+	"currentChore": String,
+	"daysToComplete": String,
+	"image": String
+});
+
+exports.User = Mongoose.model('User', UserSchema);

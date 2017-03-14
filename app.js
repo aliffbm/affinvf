@@ -3,11 +3,14 @@
  * Module dependencies.
  */
 
+ var models = require('./routes/models.js');
+
 var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
 var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var home = require('./routes/home');
@@ -33,17 +36,19 @@ var app = express();
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', handlebars());
+app.engine('handlebars', handlebars({defaultLayout:'layout'}));
 app.set('view engine', 'handlebars');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
+app.use(bodyParser());
 app.use(express.methodOverride());
-app.use(express.cookieParser('secret'));
-app.use(express.session());
+app.use(express.cookieParser());
+app.use(express.session({secret:"ok", resave:false, saveUninitialized:true}));
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 // development only
 if ('development' == app.get('env')) {
@@ -52,7 +57,52 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/home', home.viewHome);
+/*app.get('/', function(req,res){
+	res.send();
+})*/
+var localData;
+app.get('/login', function(req, res){
+
+	console.log("Anydata?");
+	console.log(localData);
+	models.User
+		.find({name: localData})
+		.exec(sendInfo);
+
+		function sendInfo(err, user){
+			res.json(user);
+		}
+
+})
+
+app.post('/login', function(req,res){
+
+	var username = req.body.username;
+	var password = req.body.password;
+
+
+	localData = username;
+
+	models.User
+		.find({name: username})
+		.exec(doSomething);
+
+	function doSomething(err, username){
+		if(err){
+			console.log(err);
+		}else{
+			if(username){
+				res.redirect('/home/'+username[0].name+'');
+			}else{
+				res.status(404).send();
+			}
+		}
+	}
+
+});
+
+app.get('/home/:user', home.viewHome);
+//app.get('/home/:user', home.User);
 app.get('/chores', chores.viewChores);
 app.get('/choresb', chores.viewChoresB);
 app.post('/chores/:id/delete', chores.deleteChore);

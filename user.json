@@ -2,21 +2,25 @@
 		{
 			"name": "Aliff",
 			"currentChore": "Dishes",
-			"expectedTime": "4 days"
+			"daysToComplete": "4",
+			"image": "../images/svg/dishes.svg"
 		},
 		{
 			"name": "Belal",
 			"currentChore": "Vaccuming",
-			"expectedTime": "4 days"
+			"daysToComplete": "4",
+			"image": "../images/svg/vacuum.svg"
 		},
 		{
 			"name": "Zack",
 			"currentChore": "Trash",
-			"expectedTime": "4 days"
+			"daysToComplete": "4",
+			"image": "../images/svg/trash.svg"
 		},
 		{
 			"name": "Esteban",
 			"currentChore": "Mopping",
-			"expectedTime": "4 days"
+			"daysToComplete": "4",
+			"image": "../images/svg/mop.svg"
 		}
 	]
