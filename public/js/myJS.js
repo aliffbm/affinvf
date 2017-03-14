@@ -18,7 +18,6 @@
 	 })
 	//add new chores
 	$('#newChoreSubmitButton').click(function(e){
-		console.log("clicked");
 		var choreTitle = $('#new-chore-form #choreTitle').val();
 		var expectedTime = $('#new-chore-form #expectedTime').val();
 		var imageURL = $('#new-chore-form #imageURL').val();
@@ -57,12 +56,12 @@
 
 			var ht = "";
 			var lengthOFe = emoticomments_json.emoticomments.length;
-			console.log(emoticomments_json.emoticomments.length)
+			
 			for(var i=0;i< lengthOFe;i++){
 			 ht += '<img class="emotiImage" id="eeMs'+i+'" width=50 src="'+emoticomments_json.emoticomments[i].image+'">';
 			}
 		
-			console.log(emoticomments_json.emoticomments[1]);
+			
 			for(var i=1;i<=lengthOf;i++){
 				new_model_html='<div><img id="myBtn'+i+'" width=40 src="../images/thought.svg" style="cursor: pointer; cursor: hand; margin: auto; display: inline-block; margin-left: 20px;"/></div>'+
 				'<div id="myModal'+i+'" class="modal">'+
@@ -128,7 +127,6 @@
 
 		for(var i=0;i<9;i++){
 		var ee = $('img#eeMs'+i+'');
-		console.log(i);
 		switch(i){
 			case 0:
 				ee.click(function(e){

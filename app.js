@@ -91,10 +91,11 @@ app.post('/login', function(req,res){
 		if(err){
 			console.log(err);
 		}else{
-			if(username){
+			console.log(username);
+			if(username[0]){
 				res.redirect('/home/'+username[0].name+'');
 			}else{
-				res.status(404).send();
+				res.send("You are not authorized <a href='/'>Go Back</a>");
 			}
 		}
 	}
