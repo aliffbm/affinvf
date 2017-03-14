@@ -11,7 +11,7 @@
 	 */
 	 function initializePage() {
 
-	
+		
 
 	 $("#complete_chore_btn").click(function(e){
 	 	$("#complete_chore_btn img").attr('src', "../images/svg/checkMarkDone.svg");
