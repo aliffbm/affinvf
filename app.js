@@ -36,7 +36,7 @@ var app = express();
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', handlebars({defaultLayout:'layout'}));
+app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -101,6 +101,40 @@ app.post('/login', function(req,res){
 	}
 
 });
+
+app.post("/register", function(req, res){
+
+	var username = req.body.registername;
+	var password = req.body.password;
+
+	models.User
+		.find({name: username})
+		.exec(registerUser);
+
+	function registerUser(err, user){
+		if(err){
+			console.log(err);
+		}else{
+			if(user[0]){
+				res.send("The username already exist <a href='/'>Go Back</a>")
+			}else{
+				var newUser = new models.User(); 
+				newUser.name = username;
+				newUser.save(afterSave);
+				function afterSave(err){
+					if(err){
+						console.log(err);
+						res.send(500);
+					}else{
+						res.send(newUser.name);
+					}
+				}
+				
+			}
+		}
+
+	}
+})
 
 app.get('/home/:user', home.viewHome);
 //app.get('/home/:user', home.User);

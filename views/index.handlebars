@@ -29,9 +29,7 @@
   							<h6><em>noun</em></h6>
   							<p>likeness based on relationship or causal connection</p>
   						</div>
-  					
-  				
-  				
+
   				<div class="col-sm-4">
 
   					<form class="form" action="/login" method="POST" id="sign-in">
@@ -43,9 +41,24 @@
   						</div>
   						  <div class="form-group">
                 <button type="submit" id="signInButton" class="btn btn-default" style="width: 100%">Log In</button>
-                <p class="text-center" style="font-size:15px; margin-top: 5px;"><a href="#" style="color:black;">Register</a></p>
+                <p class="text-center" style="font-size:15px; margin-top: 5px;"><a href="#" id="switchRegister" style="color:black;">Register</a></p>
               </div>
-  					</form>			
+  					</form>
+            <!-- Register Form-->
+
+            <form class="form" action="/register" method="POST" id="register">
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" name="registername" placeholder="name"/>
+              </div>
+              <div class="form-group">
+              <input type="text" class="form-control" id="password" name="password" placeholder="password"/>
+              </div>
+                <div class="form-group">
+                <button type="submit" id="signInButton" class="btn btn-default" style="width: 100%">Register</button>
+                <p class="text-center" style="font-size:15px; margin-top: 5px;"><a href="#" id="switchLogin" style="color:black;">Log In</a></p>
+              </div>
+            </form> 
+            <!-- End Register Form-->			
   				</div>
             <div class="col-sm-3 definitionPad">
                 <h4><strong>meditate</strong></h4>

@@ -126,7 +126,9 @@ img.modal{
      opacity: .9;
      border-radius: 50px;
 }
-
+/*#sign-in{
+    display: block;
+}*/
 #homePageIn{
      background-color: #CCFFFF;
      background-size: cover;
@@ -155,6 +157,10 @@ img.modal{
      background-color: white;
 
     
+}
+
+#register{
+    display: none;
 }
 
 #innerContainerHome{

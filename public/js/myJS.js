@@ -11,7 +11,24 @@
 	 */
 	 function initializePage() {
 
+
+	  $.get('/login', function(data){
+	 	console.log(data[0].name);
+	 	$("nav li a#home").attr("href", '/home/'+data[0].name+'');	
+	 	})
+
+	$("#switchRegister").click(function(e){
+		e.preventDefault();
+		$("#register").slideDown();
+		$("#sign-in").slideUp();
 		
+	})	
+
+	$("#switchLogin").click(function(e){
+		e.preventDefault();
+		$("#sign-in").slideDown();
+		$("#register").slideUp();
+	})	
 
 	 $("#complete_chore_btn").click(function(e){
 	 	$("#complete_chore_btn img").attr('src', "../images/svg/checkMarkDone.svg");
