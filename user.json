@@ -1,30 +1,35 @@
 [
 		{
 			"name": "Aliff",
+			"password": "abc123",
 			"currentChore": "Dishes",
 			"daysToComplete": "4",
 			"image": "../images/svg/dishes.svg"
 		},
 		{
 			"name": "Belal",
+			"password": "abc123",
 			"currentChore": "Vaccuming",
 			"daysToComplete": "4",
 			"image": "../images/svg/vacuum.svg"
 		},
 		{
 			"name": "Zack",
+			"password": "abc123",
 			"currentChore": "Trash",
 			"daysToComplete": "4",
 			"image": "../images/svg/trash.svg"
 		},
 		{
 			"name": "Esteban",
+			"password": "abc123",
 			"currentChore": "Mopping",
 			"daysToComplete": "4",
 			"image": "../images/svg/mop.svg"
 		},
 		{
 			"name": "User",
+			"password": "abc123",
 			"currentChore": "Mopping",
 			"daysToComplete": "4",
 			"image": "../images/svg/mop.svg"

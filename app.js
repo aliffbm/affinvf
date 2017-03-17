@@ -45,6 +45,10 @@ app.use(express.urlencoded());
 app.use(bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser());
+
+
+
+
 app.use(express.session({secret:"ok", resave:false, saveUninitialized:true}));
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
@@ -78,7 +82,7 @@ app.get('/login', function(req, res){
 app.post('/login', function(req,res){
 
 	var username = req.body.username;
-	var password = req.body.password;
+	var userpassword = req.body.password;
 
 
 	localData = username;
@@ -91,8 +95,8 @@ app.post('/login', function(req,res){
 		if(err){
 			console.log(err);
 		}else{
-			console.log(username);
-			if(username[0]){
+			// console.log(username[0].password);
+			if(username[0] && (username[0].password === userpassword)){
 				res.redirect('/home/'+username[0].name+'');
 			}else{
 				res.send("You are not authorized <a href='/'>Go Back</a>");
@@ -104,27 +108,31 @@ app.post('/login', function(req,res){
 
 app.post("/register", function(req, res){
 
-	var username = req.body.registername;
-	var password = req.body.password;
+	var newusername = req.body.registername;
+	var newpassword = req.body.password;
 
 	models.User
-		.find({name: username})
+		.find({name: newusername})
 		.exec(registerUser);
 
 	function registerUser(err, user){
+		//var user = user[0];
 		if(err){
 			console.log(err);
+			res.status(505).send();
 		}else{
 			if(user[0]){
 				res.send("The username already exist <a href='/'>Go Back</a>")
 			}else{
-				var newUser = new models.User(); 
-				newUser.name = username;
+
+				
+				var newUser = new models.User({name:newusername, password:newpassword, currentChore:"You currently don't have a chore assigned", daysToComplete:"Not in the game yet", image:"../images/svg/add.svg"}); 
+				newUser.name = newusername;
 				newUser.save(afterSave);
 				function afterSave(err){
 					if(err){
 						console.log(err);
-						res.send(500);
+						//res.send(500);
 					}else{
 						res.send(newUser.name);
 					}

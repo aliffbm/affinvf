@@ -38,6 +38,7 @@ exports.EmotiComment = Mongoose.model('EmotiComment', EmotiCommentSchema);
 var UserSchema = new Mongoose.Schema({
 
 	"name": String,
+	"password": String, // Need to change this to safe way of doing this
 	"currentChore": String,
 	"daysToComplete": String,
 	"image": String
