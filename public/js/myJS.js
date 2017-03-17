@@ -98,7 +98,9 @@
 	})
 
 	/*****************************************************************************************
-	*	This is the end of my Deleting Chore Stuff for the chores page...
+	*					~ BTW: This is a Remix with W3Schools, Mr. Radioman. ~
+	*	--------------------------------------------------------------------------------------
+	*	| This is the end of my Deleting Chore Stuff for the chores page...
 	*	--------------------------------------------------------------------------------------
 	* 	# I will say though, it seems like this commenting here might server useful afterall
 	* 	# I guess the question is something else..... hmmmmmmm
@@ -118,7 +120,7 @@
 	*******************************************************************************************/
 
 
-	//Remix with W3Schools
+	
 	var new_model_html; 
 	var theID;	
 
