@@ -134,7 +134,7 @@ app.post("/register", function(req, res){
 						console.log(err);
 						//res.send(500);
 					}else{
-						res.send(newUser.name);
+						res.send("The username " + newUser.name + " has been created: <a href='/'>Go Back</a>")
 					}
 				}
 				
