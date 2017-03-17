@@ -27,7 +27,9 @@ exports.Chore = Mongoose.model('Chore', ChoreSchema);
 var EmotiCommentSchema = new Mongoose.Schema({
   // fields are defined here
  	
-		"image": String
+		"name": String,
+		"image": String,
+		"hits": Number
 });
 
 exports.EmotiComment = Mongoose.model('EmotiComment', EmotiCommentSchema);

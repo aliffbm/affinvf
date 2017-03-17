@@ -22,5 +22,11 @@
 			"currentChore": "Mopping",
 			"daysToComplete": "4",
 			"image": "../images/svg/mop.svg"
+		},
+		{
+			"name": "User",
+			"currentChore": "Mopping",
+			"daysToComplete": "4",
+			"image": "../images/svg/mop.svg"
 		}
 	]

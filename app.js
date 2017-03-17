@@ -145,7 +145,37 @@ app.post('/chores/new', chores.addChore);
 
 app.get('/statistics', stats.viewStatistics);
 
-app.get('/emoticomments', emoticomments.emoJSON);
+//app.get('/emoti', emoticomments.viewEmotiComments);
+
+app.get('/emoticomments', function(req, res){
+
+	models.EmotiComment
+		.find()
+		.exec(sendData);
+
+		function sendData(err, data){
+			if(err){console.log(err)}else{
+				res.json(data);
+			}
+		}
+
+	});
+/*app.get('/emoticomments/addHit', function(req, res){
+
+	models.EmotiComment
+		.find()
+		.exec(sendData);
+
+		function sendData(err, data){
+			if(err){console.log(err)}else{
+				res.json(data);
+			}
+		}
+})*/
+app.post('/emoticomments/:type/addHit', emoticomments.addHit);
+
+
+
 // app.get('/emoticommentsjson', emoticomments.viewEmotiCommentsJSON);
 
 /*app.get('/choresB', choresB.viewChores);

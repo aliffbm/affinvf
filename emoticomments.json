@@ -2,47 +2,47 @@
 	"emoticomments":[
 		{
 
-					"name": "angel",
+					"name": "Angel",
 					"image": "images/svg/angel.svg",
 					"hits": 0
 				},
 				{
-					"name": "astonished",
+					"name": "Astonished",
 					"image": "images/svg/astonished.svg",
 					"hits": 0
 				},
 				{
-					"name": "disappointed",
+					"name": "Disappointed",
 					"image": "images/svg/disappointed.svg",
 					"hits": 0
 				},
 				{
-					"name": "faceRollEyes",
+					"name": "Eye Roll",
 					"image": "images/svg/faceRollEyes.svg",
 					"hits": 0
 				},
 				{
-					"name": "grin",
+					"name": "Grin",
 					"image": "images/svg/grin-smile.svg",
 					"hits": 0
 				},
 				{
-					"name": "happy",
+					"name": "Happy",
 					"image": "images/svg/happy.svg",
 					"hits": 0
 				},
 				{
-					"name": "neutral",
+					"name": "Neutral",
 					"image": "images/svg/neutral.svg",
 					"hits": 0
 				},
 				{
-					"name": "triumph",
+					"name": "Triumph",
 					"image": "images/svg/triumph.svg",
 					"hits": 0
 				},
 				{
-					"name": "worried",
+					"name": "Worried",
 					"image": "images/svg/worried.svg",
 					"hits": 0
 

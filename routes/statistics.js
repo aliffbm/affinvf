@@ -1,15 +1,17 @@
-
+var models = require('./models');
 /*
  * GET home page.
  */
 
 exports.viewStatistics = function(req, res){
 
-	/*models.Project
+	models.EmotiComment
 		.find()
-		.sort('date')
-		.exec(renderProjects);
-*/
-		res.render('statistics');
+		.exec(renderEmoticomments);
+
+	function renderEmoticomments(err, emoticomments){
+
+		res.render('statistics', {'emoticomments': emoticomments});
+	}
 
 };

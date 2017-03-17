@@ -72,10 +72,14 @@
 			var lengthOf = $('.panel-default:nth-child(n)').length;
 
 			var ht = "";
-			var lengthOFe = emoticomments_json.emoticomments.length;
+			var lengthOFe = emoticomments_json.length;
 			
 			for(var i=0;i< lengthOFe;i++){
-			 ht += '<img class="emotiImage" id="eeMs'+i+'" width=50 src="'+emoticomments_json.emoticomments[i].image+'">';
+			 ht += '<img class="emotiImage" value="'+emoticomments_json[i].name+'" id="eeMs'+i+'" width=50 src="'+emoticomments_json[i].image+'">';
+			
+			/* $.get('/emoticomments/addHit', function(){
+			 	res.send("Hit sent");
+			 })*/
 			}
 		
 			
@@ -97,6 +101,7 @@
 				'</div>'+
 
 				'</div>';
+
 				
 
 
@@ -144,188 +149,36 @@
 
 		for(var i=0;i<9;i++){
 		var ee = $('img#eeMs'+i+'');
-		switch(i){
-			case 0:
-				ee.click(function(e){
-					e.preventDefault();
+		if(i<6){
+			console.log(ee);
+		}
+
+		ee.click(function(e){
+			e.preventDefault();
+			var toDisplay = $(this).closest("div.modal");
+			var toDisplayEl = toDisplay[0];
+			toDisplayEl.style.display = "none";
+
+
+			var toChange = toDisplay.find(".modal-body");
+			var emotiType = $(this).attr("value");
+			var emotiTypeFormat = emotiType.charAt(0).toUpperCase() + emotiType.slice(1);
+			toChange.html("<h1>"+emotiTypeFormat+" Sent</h1>");
+			toDisplayEl.style.display = "block";
+			setTimeout(function(){
+				toDisplayEl.style.display = "none";
+				window.location.href = '/chores';
+			}, 1000);
+
+			$.post('/emoticomments/'+emotiType+'/addHit');
+			$.get('/emoticomments', function(data){
+				console.log(data);
+			});
+
+		})
+		}
 		
-					//console.log($(this).closest("div.modal")[0]);
-					//$(this).closest("div.modal").style.display="none";
-					var toDisplay = $(this).closest("div.modal");
-					var toDisplayEl = toDisplay[0];
-					toDisplayEl.style.display = "none";
-				
-					var toChange = toDisplay.find(".modal-body");
-					//console.log(toChange);//.text("It has been done!")
-					toChange.html("<h1>Angel Sent</h1>");
-					toDisplayEl.style.display = "block";
-					setTimeout(function(){
-						toDisplayEl.style.display = "none";
-						window.location.href = '/chores';
-					}, 1000);
-
-					
-
-
-				})
-				break;
-			case 1:
-				ee.click(function(e){
-					e.preventDefault();
-					var toDisplay = $(this).closest("div.modal");
-					var toDisplayEl = toDisplay[0];
-					toDisplayEl.style.display = "none";
-				
-					var toChange = toDisplay.find(".modal-body");
-					//console.log(toChange);//.text("It has been done!")
-					toChange.html("<h1>Surprise Sent</h1>");
-					toDisplayEl.style.display = "block";
-					setTimeout(function(){
-						toDisplayEl.style.display = "none";
-						window.location.href = '/chores';
-					}, 1000);
-
-				})
-				break;
-			case 2: 
-				ee.click(function(e){
-					e.preventDefault();
-					var toDisplay = $(this).closest("div.modal");
-					var toDisplayEl = toDisplay[0];
-					toDisplayEl.style.display = "none";
-				
-					var toChange = toDisplay.find(".modal-body");
-					//console.log(toChange);//.text("It has been done!")
-					toChange.html("<h1>Disappointment Sent</h1>");
-					toDisplayEl.style.display = "block";
-					setTimeout(function(){
-						toDisplayEl.style.display = "none";
-						window.location.href = '/chores';
-					}, 1000);
-
-				})
-				break;
-			case 3:
-				ee.click(function(e){
-					e.preventDefault();
-					var toDisplay = $(this).closest("div.modal");
-					var toDisplayEl = toDisplay[0];
-					toDisplayEl.style.display = "none";
-				
-					var toChange = toDisplay.find(".modal-body");
-					//console.log(toChange);//.text("It has been done!")
-					toChange.html("<h1>Rolled your eyes Sent</h1>");
-					toDisplayEl.style.display = "block";
-					setTimeout(function(){
-						toDisplayEl.style.display = "none";
-						window.location.href = '/chores';
-					}, 1000);
-
-				})
-				break;
-			case 4:
-				ee.click(function(e){
-					e.preventDefault();
-					var toDisplay = $(this).closest("div.modal");
-					var toDisplayEl = toDisplay[0];
-					toDisplayEl.style.display = "none";
-				
-					var toChange = toDisplay.find(".modal-body");
-					//console.log(toChange);//.text("It has been done!")
-					toChange.html("<h1>Smile Sent</h1>");
-					toDisplayEl.style.display = "block";
-					setTimeout(function(){
-						toDisplayEl.style.display = "none";
-						window.location.href = '/chores';
-					}, 1000);
-
-				})
-				break;
-			case 5:
-				ee.click(function(e){
-					e.preventDefault();
-					var toDisplay = $(this).closest("div.modal");
-					var toDisplayEl = toDisplay[0];
-					toDisplayEl.style.display = "none";
-				
-					var toChange = toDisplay.find(".modal-body");
-					//console.log(toChange);//.text("It has been done!")
-					toChange.html("<h1>Happy Sent</h1>");
-					toDisplayEl.style.display = "block";
-					setTimeout(function(){
-						toDisplayEl.style.display = "none";
-						window.location.href = '/chores';
-					}, 1000);
-
-				})
-				break;
-			case 6:
-				ee.click(function(e){
-					e.preventDefault();
-					var toDisplay = $(this).closest("div.modal");
-					var toDisplayEl = toDisplay[0];
-					toDisplayEl.style.display = "none";
-				
-					var toChange = toDisplay.find(".modal-body");
-					//console.log(toChange);//.text("It has been done!")
-					toChange.html("<h1>Neutral Sent</h1>");
-					toDisplayEl.style.display = "block";
-					setTimeout(function(){
-						toDisplayEl.style.display = "none";
-						window.location.href = '/chores';
-					}, 1000);
-
-				})
-				break;
-			case 7:
-				ee.click(function(e){
-					e.preventDefault();
-					var toDisplay = $(this).closest("div.modal");
-					var toDisplayEl = toDisplay[0];
-					toDisplayEl.style.display = "none";
-				
-					var toChange = toDisplay.find(".modal-body");
-					//console.log(toChange);//.text("It has been done!")
-					toChange.html("<h1>Triumph Sent</h1>");
-					toDisplayEl.style.display = "block";
-					setTimeout(function(){
-						toDisplayEl.style.display = "none";
-						window.location.href = '/chores';
-					}, 1000);
-
-				})
-				break;
-			case 8:
-				ee.click(function(e){
-					e.preventDefault();
-					var toDisplay = $(this).closest("div.modal");
-					var toDisplayEl = toDisplay[0];
-					toDisplayEl.style.display = "none";
-				
-					var toChange = toDisplay.find(".modal-body");
-					//console.log(toChange);//.text("It has been done!")
-					toChange.html("<h1>Worried Sent</h1>");
-					toDisplayEl.style.display = "block";
-					setTimeout(function(){
-						toDisplayEl.style.display = "none";
-						window.location.href = '/chores';
-					}, 1000);
-
-				})
-				break;
-
-			default:
-				ee.click(function(e){
-					alert("I am a default");
-				})
-		}
-			/*ee.click(function(e){
-				e.preventDefault();
-				console.log(i);
-				console.log(i);
-				alert("weee! I am " + i);
-			})*/
-		}
+		
 
 
 
@@ -333,73 +186,6 @@
 	$.get('/emoticomments', addModal);
 
 }
-
-
-
-	// create modal for emoticomment on Chore B
-
-	// var modal = document.getElementById('commentModal');
-
-	// // Get the button that opens the modal
-	// var btn = document.getElementById("commentBtn");
-
-	// // Get the <span> element that closes the modal
-	// var span = document.getElementsByClassName("close")[0];
-
-	// // When the user clicks the button, open the modal 
-	// btn.onclick = function(e) {
-	// 	e.preventDefault();
-	// 	modal.style.display = "block";
-	// 	ga("send", "event", "emotiComment", "click");
-	// }
-
-	// // When the user clicks on <span> (x), close the modal
-	// span.onclick = function() {
-	// 	modal.style.display = "none";
-	// }
-
-	// // When the user clicks anywhere outside of the modal, close it
-
-	// /*window.onclick = function(event) {
-	// 	if (event.target == modal) {
-	// 		modal.style.display = "none";
-	// 	}
-	// }*/
-
-	// // create modal for emoticomment on Chore B
-
-	// var modalB = document.getElementById('addChoreBModal');
-
-	// // Get the button that opens the modal
-	// var btnB = document.getElementById("addChoreBBtn");
-
-	// // Get the <span> element that closes the modal
-	// var span = document.getElementsByClassName("close")[0];
-
-	// // When the user clicks the button, open the modal 
-	// btnB.onclick = function(e) {
-	// 	e.preventDefault();
-	// 	modalB.style.display = "block";
-	// 	ga("send", "event", "newAddedChore", "Click");
-	// }
-
-	// // When the user clicks on <span> (x), close the modal
-	// span.onclick = function() {
-	// 	modalB.style.display = "none";
-	// }
-
-	// // When the user clicks anywhere outside of the modal, close it
-
-	// window.onclick = function(event) {
-	// 	if (event.target == modalB || event.target == modal) {
-	// 		modalB.style.display = "none";
-	// 		modal.style.display = "none";
-	// 	}
-
-	// }
-
-
-	
 
 
 

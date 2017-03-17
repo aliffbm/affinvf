@@ -42,6 +42,20 @@
         </div>
       </div>
     </nav>
+
+<div class="container" style="margin-top: 100px;">
+    
+{{#each emoticomments}}
+  <div class="col-sm-3 text-center">
+  <h3>{{name}}</h3>
+  <img href="#" width=70 src="{{image}}" style="margin: auto;"/>
+  <p style="margin-top:10px;"><strong>
+  # of Hits: {{hits}}
+  </strong></p>
+  
+  </div>
+  {{/each}}
+  </div>
 <script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/myJS.js"></script>	
