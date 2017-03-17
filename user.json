@@ -4,6 +4,7 @@
 			"password": "abc123",
 			"currentChore": "Dishes",
 			"daysToComplete": "4",
+			"completed": false,
 			"image": "../images/svg/dishes.svg"
 		},
 		{
@@ -11,6 +12,7 @@
 			"password": "abc123",
 			"currentChore": "Vaccuming",
 			"daysToComplete": "4",
+			"completed": false,
 			"image": "../images/svg/vacuum.svg"
 		},
 		{
@@ -18,6 +20,7 @@
 			"password": "abc123",
 			"currentChore": "Trash",
 			"daysToComplete": "4",
+			"completed": false,
 			"image": "../images/svg/trash.svg"
 		},
 		{
@@ -25,6 +28,7 @@
 			"password": "abc123",
 			"currentChore": "Mopping",
 			"daysToComplete": "4",
+			"completed": false,
 			"image": "../images/svg/mop.svg"
 		},
 		{
@@ -32,6 +36,7 @@
 			"password": "abc123",
 			"currentChore": "Mopping",
 			"daysToComplete": "4",
+			"completed": false,
 			"image": "../images/svg/mop.svg"
 		}
 	]

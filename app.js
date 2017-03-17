@@ -126,7 +126,7 @@ app.post("/register", function(req, res){
 			}else{
 
 				
-				var newUser = new models.User({name:newusername, password:newpassword, currentChore:"You currently don't have a chore assigned", daysToComplete:"Not in the game yet", image:"../images/svg/add.svg"}); 
+				var newUser = new models.User({name:newusername, password:newpassword, currentChore:"None Assigned", daysToComplete:"Not in the game yet", image:"../images/svg/add.svg"}); 
 				newUser.name = newusername;
 				newUser.save(afterSave);
 				function afterSave(err){

@@ -11,10 +11,22 @@
 	 */
 	 function initializePage() {
 
-
+	 	/*LOGIN AND REGISTERING STUFF ...
+	 	*
+	 	*. wAAA! dEAR LORD,  I am  sorry for all the terrible things I have done.
+	 	*
+	 	* Get it together, Aliff. Form your thoughts and patterns. Build your schemas and synthesize them. 
+		*
+		* .... But it seems so easy to everyone..... Is this genetically predisposed.... Do i interject myself into a 
+		* group that I truly don't belong toooooooOo?
+	 	*********************I*************************************************/
 	  $.get('/login', function(data){
 	 	console.log(data[0].name);
-	 	$("nav li a#home").attr("href", '/home/'+data[0].name+'');	
+	 	$("nav li a#home").attr("href", '/home/'+data[0].name+'');
+
+	 		if(data[0].currentChore != "None Assigned"){
+	 			$("#complete_chore_btn").show();
+	 		}
 	 	})
 
 	$("#switchRegister").click(function(e){
@@ -33,7 +45,18 @@
 	 $("#complete_chore_btn").click(function(e){
 	 	$("#complete_chore_btn img").attr('src', "../images/svg/checkMarkDone.svg");
 	 })
-	//add new chores
+
+	 /*
+		//ADD NEW CHORES
+	 	So here, I am creating a button to create a new chore on the 
+	 	* chores page
+	 	* 
+		Stuff to add new Chores.... I love you, love, God.
+
+		
+
+	 */
+	
 	$('#newChoreSubmitButton').click(function(e){
 		var choreTitle = $('#new-chore-form #choreTitle').val();
 		var expectedTime = $('#new-chore-form #expectedTime').val();
@@ -50,7 +73,19 @@
 		ga("send", "event", "newAddedChore", "Click");
 	});
 
-	// delete Chores
+	/**************************************************************************************
+	* End the CHORES ADD BUTTON thing here
+	***************************************************************************************/
+
+	/******************************************************************************************
+	*	THE CREATION OF DELETE-CHORES button and FUNCTION
+	*	Delete Chores here
+	*	In other classes, I wouold get penalize a good amount of points for not having
+	* 	decorations (comments) like this..... Does anyone else feel helpless from our need to confirm
+	*  	in order to feel like you belong???? Blah Blah BLAH blah.....  
+	*
+	*******************************************************************************************/
+	
 	$(".chore-delete").click(function(e){
 		e.preventDefault();
 
@@ -62,12 +97,21 @@
 
 	})
 
+	/*
+	*	This is the end of my Deleting Chore Stuff for the chores page...
+	* 	I will say though, it seems like this commenting here might server useful afterall
+	* 	I guess the question is something else..... hmmmmmmm
+	*
+	**********************/
+
+
+
+
 
 	//Remix with W3Schools
 	var new_model_html; 
 	var theID;	
-	// $.get(url_model_call, addModel);
-	// adding modal to each Thought cloud for emoticomment
+
 		function addModal(emoticomments_json){
 			var lengthOf = $('.panel-default:nth-child(n)').length;
 
@@ -76,10 +120,7 @@
 			
 			for(var i=0;i< lengthOFe;i++){
 			 ht += '<img class="emotiImage" value="'+emoticomments_json[i].name+'" id="eeMs'+i+'" width=50 src="'+emoticomments_json[i].image+'">';
-			
-			/* $.get('/emoticomments/addHit', function(){
-			 	res.send("Hit sent");
-			 })*/
+		
 			}
 		
 			
@@ -138,13 +179,6 @@
 				}
 			}
 
-		
-
-
-	/*	$('img#eeMs3').click(function(e){
-					e.preventDefault();
-					alert("Kool!");
-				})*/
 		}
 
 		for(var i=0;i<9;i++){
