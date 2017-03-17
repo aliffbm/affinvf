@@ -97,15 +97,25 @@
 
 	})
 
-	/*
+	/*****************************************************************************************
 	*	This is the end of my Deleting Chore Stuff for the chores page...
-	* 	I will say though, it seems like this commenting here might server useful afterall
-	* 	I guess the question is something else..... hmmmmmmm
+	*	--------------------------------------------------------------------------------------
+	* 	# I will say though, it seems like this commenting here might server useful afterall
+	* 	# I guess the question is something else..... hmmmmmmm
 	*
-	**********************/
+	*******************************************************************************************/
+	// neat.... I am evolving....
 
-
-
+	/*********************************************************************************************
+	*	~~~~~~~~!!! I wanted to use a pop on the window to show which faces to pick !!!!!~~~~~~~~~
+	*	@ I got some help from W3SCHOOLS <3 <----------- XoXoxO Mucho Gracias ~~~~~~~~~~~~~~~~~~~~
+	*	I HAVE A LOT OF GRATITUDE WWWW creators and thes one who use to promot knowledge and good information....
+	*	
+	*	**My head hurts**Who Cares**
+	*
+	*
+	*
+	*******************************************************************************************/
 
 
 	//Remix with W3Schools
