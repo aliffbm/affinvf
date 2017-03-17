@@ -42,9 +42,7 @@
 		$("#register").slideUp();
 	})	
 
-	 $("#complete_chore_btn").click(function(e){
-	 	$("#complete_chore_btn img").attr('src', "../images/svg/checkMarkDone.svg");
-	 })
+	
 
 	 /*
 		//ADD NEW CHORES
@@ -96,6 +94,43 @@
 		});
 
 	})
+
+
+	/*****************************************************************************************
+	*
+	*	Make the CHECKMARK button go BYE BYE when God's loved ones clicks on it... 
+	*	
+	*	~~~~~~~~~I ilove you, Lord. <------- THIS ENTIRE THING IS GOD!!!! %TRUE STORY% ~~~~~~
+	*	I am grateful
+	*
+	*
+	******************************************************************************************/
+
+
+	$("#isChoreAssigned").click(function(e){
+		var requestChoreImageName = $(this).attr('src');
+		if(requestChoreImageName === "../images/svg/add.svg"){
+			alert("Clicked");
+		}
+	})
+
+	$("#complete_chore_btn").click(function(e){
+	 	$("#complete_chore_btn img").attr('src', "../images/svg/checkMarkDone.svg");
+	 
+
+	 		$("#complete_chore_btn").fadeOut(500);
+
+
+	 		$.post('/updateChoreCompleted', function(){
+	 			console.log("Chore has been updated");
+	 		})
+	 		$.get('/updateChoreCompleted', function(data){
+	 			console.log("get updated chore");
+	 			window.location.href = '/home/'+data[0].name+'';
+
+	 		})	
+	 		
+	 })
 
 	/*****************************************************************************************
 	*					~ BTW: This is a Remix with W3Schools, Mr. Radioman. ~
@@ -230,6 +265,15 @@
 
 	}
 	$.get('/emoticomments', addModal);
+
+	/**********************************************************************
+	*
+	*	DONE WITH THE MODEL "OVERLAY" stuff..... still trying to understand use of word MODAL 
+	*	
+	*	*My brain hurts*
+	*
+	*
+	***********************************************************************/
 
 }
 

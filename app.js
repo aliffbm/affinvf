@@ -18,12 +18,9 @@ var chores = require('./routes/chores');
 // var choresB = require('./routes/choresB');
 var stats = require('./routes/statistics');
 var emoticomments = require('./routes/emoticomments')
-//var emoticomments = require('./routes/emoticomments');
-// Example route
-// var user = require('./routes/user');
 
-// Connect to the Mongo database, whether locally or on Heroku
-// MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
+
+
 var local_database_name = 'affin';
 var mongodbURI = "mongodb://heroku_3b5860g1:adannf1r7iabc18mbsu23a9moo@ds119810.mlab.com:19810/heroku_3b5860g1";
 
@@ -61,9 +58,16 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-/*app.get('/', function(req,res){
-	res.send();
-})*/
+
+
+/*******************************************************
+*
+*	I am putting the login in stuff here... I should
+*	probably refactor this.....
+*
+*
+*
+********************************************************/
 var localData;
 app.get('/login', function(req, res){
 
@@ -74,7 +78,7 @@ app.get('/login', function(req, res){
 		.exec(sendInfo);
 
 		function sendInfo(err, user){
-			res.json(user);
+			res.send(user);
 		}
 
 })
@@ -144,8 +148,46 @@ app.post("/register", function(req, res){
 	}
 })
 
+// I use this everytime I make an update to the database to re-render the new data save
 app.get('/home/:user', home.viewHome);
-//app.get('/home/:user', home.User);
+
+app.get('/updateChoreCompleted', function(req, res){
+
+	models.User
+		.find({name: localData})
+		.exec(sendInfo);
+
+		function sendInfo(err, user){
+			if(err){
+				console.log(err);
+				res.status(500).send();
+			}else{
+				res.send(user);
+			}
+		}
+})
+
+app.post('/updateChoreCompleted', function(req, res){
+
+	models.User
+		.find({name:localData}, function(err, user){
+			var user = user[0];
+			if(err){
+				console.log(err);
+				res.status(500).send();
+			}else{
+				user.currentChore = "None Assigned";
+				user.image = "../images/svg/add.svg";
+				user.daysToComplete = "0";
+				user.save();
+
+			}
+
+		});
+		
+
+});
+
 app.get('/chores', chores.viewChores);
 app.get('/choresb', chores.viewChoresB);
 app.post('/chores/:id/delete', chores.deleteChore);

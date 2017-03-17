@@ -58,18 +58,23 @@
                <div class="col-sm-12" id="task_text_container_header">
                 <h3>Your task is {{currentChore}}</h3>
 
-                <img width="300" src="{{image}}"/>
+                <img width="300" src="{{image}}" id="isChoreAssigned"/>
 
                 <p># of days to Complete: {{daysToComplete}}</p>
 
               </div>
+              <!--Complete chore Button with CheckMark-->
               <div class="col-sm-12 text-center" id="complete_chore_btn" style="display: none;">
  
                <img width=60 src="../images/svg/checkMark.svg" style="margin:auto;">                
              </div>
+
+             <!--End CheckMArk-->
+             <!--To Request a chore if task is already assigned-->
              <div class="col-sm-3" style="visibility: hidden;">
               <button type="button" style="border-radius:150px; margin-top: 10px;" class="btn btn-primary pull-left">Request Chore</button> 
             </div>
+
       </div>
       <br>
           <div class="col-sm-5">
