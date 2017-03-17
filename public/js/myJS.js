@@ -110,7 +110,11 @@
 	$("#isChoreAssigned").click(function(e){
 		var requestChoreImageName = $(this).attr('src');
 		if(requestChoreImageName === "../images/svg/add.svg"){
-			alert("Clicked");
+		
+			$.post("/randomAssignChore");
+			$.get("/randomAssignChore", function(data){
+				window.location.href = '/home/'+data[0].name+'';
+			});
 		}
 	})
 

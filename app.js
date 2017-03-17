@@ -188,6 +188,41 @@ app.post('/updateChoreCompleted', function(req, res){
 
 });
 
+app.get('/randomAssignChore', function(req, res){
+	models.User
+		.find({name:localData})
+		.exec(sendData);
+
+		function sendData(err, user){
+			if(err){
+				console.log(err);
+			}else{
+				res.send(user);
+			}
+
+		}
+})
+
+app.post('/randomAssignChore', function(req, res){
+
+	models.User
+		.find({name:localData}, function(err, user){
+			var user = user[0];
+			if(err){
+				console.log(err);
+				res.status(500).send();
+			}else{
+				user.currentChore = "Vacumming";
+				user.image = "../images/svg/vacuum.svg";
+				user.daysToComplete = "3";
+				user.save();
+
+			}
+
+		});
+		
+
+});
 app.get('/chores', chores.viewChores);
 app.get('/choresb', chores.viewChoresB);
 app.post('/chores/:id/delete', chores.deleteChore);
