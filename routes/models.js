@@ -41,6 +41,7 @@ var UserSchema = new Mongoose.Schema({
 	"password": String, // Need to change this to safe way of doing this
 	"currentChore": String,
 	"daysToComplete": String,
+	"wordsToEncourage": String,
 	"completed": Boolean,
 	"image": String
 });

@@ -4,6 +4,7 @@
 			"password": "abc123",
 			"currentChore": "Dishes",
 			"daysToComplete": "4",
+			"wordsToEncourage": "When Dishes are clean people...",
 			"completed": false,
 			"image": "../images/svg/dishes.svg"
 		},
@@ -12,6 +13,7 @@
 			"password": "abc123",
 			"currentChore": "Vaccuming",
 			"daysToComplete": "4",
+			"wordsToEncourage": "When the carpets are vacummed people...",
 			"completed": false,
 			"image": "../images/svg/vacuum.svg"
 		},
@@ -21,6 +23,7 @@
 			"currentChore": "Trash",
 			"daysToComplete": "4",
 			"completed": false,
+			"wordsToEncourage": "When trash is not over piled...",
 			"image": "../images/svg/trash.svg"
 		},
 		{
@@ -28,6 +31,7 @@
 			"password": "abc123",
 			"currentChore": "Mopping",
 			"daysToComplete": "4",
+			"wordsToEncourage": "When the floors are mopped people...",
 			"completed": false,
 			"image": "../images/svg/mop.svg"
 		},
@@ -37,6 +41,7 @@
 			"currentChore": "Mopping",
 			"daysToComplete": "4",
 			"completed": false,
+			"wordsToEncourage": "When the floors are mopped people...",
 			"image": "../images/svg/mop.svg"
 		}
 	]

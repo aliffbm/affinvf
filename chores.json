@@ -5,6 +5,7 @@
 			"name": "Dishes",
 			"expectedTime": "30 min",
 			"image": "/images/sink.jpg",
+			"wordsToEncourage": "When Dishes are clean people...",
 			"emoticomments":[
 				{
 
@@ -60,6 +61,7 @@
 			"name": "Trash",
 			"expectedTime": "10 min",
 			"image": "images/oven_3.jpg",
+			"wordsToEncourage": "When trash is not over piled...",
 			"emoticomments":[
 				{
 
@@ -115,6 +117,7 @@
 			"name": "Vacuuming",
 			"expectedTime": "45 min",
 			"image": "images/shower.jpg",
+			"wordsToEncourage": "When the carpets are vacummed people...",
 			"emoticomments":[
 				{
 
@@ -170,6 +173,7 @@
 			"name": "Mopping",
 			"expectedTime": "1 hr",
 			"image": "images/laundry.jpg",
+			"wordsToEncourage": "When the floors are mopped people...",
 			"emoticomments":[
 				{
 
