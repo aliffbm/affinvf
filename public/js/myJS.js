@@ -39,9 +39,7 @@
 		//ADD NEW CHORES
 	 	So here, I am creating a button to create a new chore on the 
 	 	* chores page
-	 	* 
-		Stuff to add new Chores.... I love you, love, God.
-
+	 	
 		
 
 	 */
@@ -69,9 +67,6 @@
 	/******************************************************************************************
 	*	THE CREATION OF DELETE-CHORES button and FUNCTION
 	*	Delete Chores here
-	*	In other classes, I wouold get penalize a good amount of points for not having
-	* 	decorations (comments) like this..... Does anyone else feel helpless from our need to confirm
-	*  	in order to feel like you belong???? Blah Blah BLAH blah.....  
 	*
 	*******************************************************************************************/
 	
@@ -87,15 +82,7 @@
 	})
 
 
-	/*****************************************************************************************
-	*
-	*	Make the CHECKMARK button go BYE BYE when God's loved ones clicks on it... 
-	*	
-	*	~~~~~~~~~I ilove you, Lord. <------- THIS ENTIRE THING IS GOD!!!! %TRUE STORY% ~~~~~~
-	*	I am grateful
-	*
-	*
-	******************************************************************************************/
+
 
 
 	$("#isChoreAssigned").click(function(e){
@@ -127,27 +114,7 @@
 	 		
 	 })
 
-	/*****************************************************************************************
-	*					~ BTW: This is a Remix with W3Schools, Mr. Radioman. ~
-	*	--------------------------------------------------------------------------------------
-	*	| This is the end of my Deleting Chore Stuff for the chores page...
-	*	--------------------------------------------------------------------------------------
-	* 	# I will say though, it seems like this commenting here might server useful afterall
-	* 	# I guess the question is something else..... hmmmmmmm
-	*
-	*******************************************************************************************/
-	// neat.... I am evolving....
 
-	/*********************************************************************************************
-	*	~~~~~~~~!!! I wanted to use a pop on the window to show which faces to pick !!!!!~~~~~~~~~
-	*	@ I got some help from W3SCHOOLS <3 <----------- XoXoxO Mucho Gracias ~~~~~~~~~~~~~~~~~~~~
-	*	I HAVE A LOT OF GRATITUDE WWWW creators and thes one who use to promot knowledge and good information....
-	*	
-	*	**My head hurts**Who Cares**
-	*
-	*
-	*
-	*******************************************************************************************/
 
 
 	
@@ -261,14 +228,6 @@
 	}
 	$.get('/emoticomments', addModal);
 
-	/**********************************************************************
-	*
-	*	DONE WITH THE MODEL "OVERLAY" stuff..... still trying to understand use of word MODAL 
-	*	
-	*	*My brain hurts*
-	*
-	*
-	***********************************************************************/
 
 }
 
