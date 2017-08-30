@@ -11,15 +11,6 @@
 	 */
 	 function initializePage() {
 
-	 	/*LOGIN AND REGISTERING STUFF ...
-	 	*
-	 	*. wAAA! dEAR LORD,  I am  sorry for all the terrible things I have done.
-	 	*
-	 	* Get it together, Aliff. Form your thoughts and patterns. Build your schemas and synthesize them. 
-		*
-		* .... But it seems so easy to everyone..... Is this genetically predisposed.... Do i interject myself into a 
-		* group that I truly don't belong toooooooOo?
-	 	*********************I*************************************************/
 	  $.get('/login', function(data){
 	 	console.log(data[0].name);
 	 	$("nav li a#home").attr("href", '/home/'+data[0].name+'');
